@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to prototype_path(@comment.prototype_id)
     else
-      render :create, status: :unprocessable_entity
+      render "prototypes/show"  
     end    
   end
 
