@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :prototypes, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
     resources :comments, only: [:create]
   get 'prototypes/index'  #この行は不要かもしれない。すでにresources :prototypesでindexアクションへのルートは生成されているからです。この行を削除しても、indexアクションへのルーティングには影響はありません。
+  end
   root to: "prototypes#index"
 end
